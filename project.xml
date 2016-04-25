@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="openfl_speed_test2" package="ryz.openfl.openflspeedtest2" version="1.0.0" company="ryzed" />
+	
+	<!-- output -->
+	<app main="Main" file="openflspeedtest2" path="bin" />
+	
+	<window background="#1f2f3f" fps="60" />
+	<window width="800" height="480" unless="mobile" />
+	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<!-- <set name="openfl-legacy" /> -->
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+	
+	<!-- assets -->
+	<icon path="assets/openfl.svg" />
+	<assets path="assets/img" rename="img" />
+	
+	<!-- optimize output -->
+	<haxeflag name="-dce full" /> 
+	<android target-sdk-version="17" /> 
+	
+	<haxedef name="webgl" />
+	<haxedef name="dom" />
+
+</project>
